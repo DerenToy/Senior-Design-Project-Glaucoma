@@ -1,4 +1,4 @@
-# Designing a Decision Support Web Interface for Glaucoma Diagnosis - Senior Design Project
+# Designing a Decision Support Web Interface for Glaucoma Diagnosis
 # Description: 
 In this project, an artificial intelligence model that can predict glaucoma with retinal photos has been created.
 The artificial intelligence model is combined with a web interface so that it can be presented to the end user.
