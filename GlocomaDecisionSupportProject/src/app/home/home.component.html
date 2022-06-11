@@ -1,0 +1,30 @@
+<div class="container {{glaucomaPredictionAnimClass}}">
+    <app-predict-image (onCanvasRectangleImageData)="changeImageData($event)"></app-predict-image>
+    <div class="predict-image-info">
+        <div [ngStyle]="{'display': !predictions ? '':'none'}" class="predict-image-how-to">
+            <h1>How To?</h1>
+            <p>Upload your retina image to the box on the left. Then click predict button! You can select a rectangle if
+                you wish by drawing on uploaded image.</p>
+            <canvas #predictcanvas class="predict-canvas"></canvas>
+            <button (click)="predictImage()"
+                class="predict-button {{ canvasRectangleImageData ? 'activated-button':'disabled-button' }}"
+                [disabled]="!canvasRectangleImageData">Predict</button>
+        </div>
+        <div *ngIf="predictions" class="predict-image-results">
+            <h1>Results</h1>
+            <div class="result">
+                <b>Predicted Glaucoma Probability</b>
+                <app-progress-bar [progressWantedPercent]="glaucomaPredictionPercent"></app-progress-bar>
+                <i>{{glaucomaPredictionPercent}}%</i>
+                <p *ngIf="glaucomaPredictionPercent < 40">Congratulations! You most likely do not have glaucoma.</p>
+                <p *ngIf="glaucomaPredictionPercent < 60 && glaucomaPredictionPercent > 40">You may have glaucoma!
+                    Please consult your doctor and ask for further testing.</p>
+                <p *ngIf="glaucomaPredictionPercent > 60">You probably have glaucoma! Please consult your doctor and ask
+                    for further testing.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="reset-button" (click)="reset()">
+    <fa-icon [icon]="faRedo"></fa-icon>
+</div>

@@ -1,0 +1,40 @@
+.predict-image {
+    width: 30vw;
+    height: 80vh;
+    border-radius: 50px;
+    background-color: #c8dadf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: #0f3c4b;
+}
+
+.inner-border {
+    width: 97%;
+    height: 97%;
+    border-radius: 50px;
+    border: 1px dashed black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-border img {
+    width: 80%;
+    opacity: 0.5;
+}
+
+.waiting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

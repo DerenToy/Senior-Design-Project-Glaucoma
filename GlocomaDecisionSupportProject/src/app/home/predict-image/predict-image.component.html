@@ -1,0 +1,14 @@
+<div class="predict-image">
+    <div *ngIf="!isDropped" class="inner-border" appFileDrop (fileDropped)="upload($event)" (click)="fileField.click()">
+        <div class="waiting">
+            <img src="assets/retina-img.png" alt="retina icon">
+            <span><strong>Choose a retina image</strong> or drag it here.</span>
+            <input type="file" name="file" id="file" #fileField (change)="upload($event.target.files)" hidden>
+        </div>
+
+    </div>
+    <div [ngStyle]="{width: isDropped ? '100%' : '0%', height: isDropped ? '100%' : '0%'}" class="dropped">
+        <canvas #canvas id="mycanvas" (mousedown)="rectDrawStart($event)" (mousemove)="rectDrawing($event)"
+            (mouseup)="rectDrawEnd($event)" (mouseleave)="rectDrawEnd($event)"></canvas>
+    </div>
+</div>

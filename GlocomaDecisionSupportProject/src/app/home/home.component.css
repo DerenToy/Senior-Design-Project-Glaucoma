@@ -1,0 +1,128 @@
+.container {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-image: linear-gradient(to top, rgba(255, 0, 0, 0.603), white 40%); */
+    /* padding-right: 15vw; */
+}
+
+.not-glaucoma {
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, rgba(0, 255, 0, 0.603), white 40%);
+    animation: glaucoma-prediction-anim 1200ms ease-in-out 1 forwards;
+}
+
+.maybe-glaucoma {
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, rgba(255, 255, 0, 0.603), white 40%);
+    animation: glaucoma-prediction-anim 1200ms ease-in-out 1 forwards;
+}
+
+.glaucoma {
+    background-size: 200% 200%;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.603), white 40%);
+    animation: glaucoma-prediction-anim 1200ms ease-in-out 1 forwards;
+}
+
+@keyframes glaucoma-prediction-anim {
+    0% {
+        /* opacity: 0.5; */
+        background-position: 0% 0%;
+    }
+    100% {
+        /* opacity: 1; */
+        background-position: 100% 100%;
+    }
+}
+
+.container > div {
+    margin: 2vw;
+}
+
+.predict-image-info {
+    width: 40vw;
+    height: 80vh;
+    color: rgb(0, 83, 83);
+}
+
+.predict-image-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.predict-image-how-to {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.predict-image-how-to * {
+    margin-top: 2vw;
+}
+
+.predict-button {
+    width: 20vw;
+    height: 10vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    background-color: #25927b;
+}
+
+.disabled-button {
+    opacity: 0.8;
+    color: rgb(46, 46, 46);
+}
+
+.activated-button {
+    opacity: 1;
+    color: black;
+}
+
+.activated-button:hover {
+    color: white;
+    background-color: #12a182;
+}
+
+.predict-canvas {
+    width: 70%;
+    border: 1px solid grey;
+}
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.result * {
+    margin-top: 2vh;
+}
+
+.reset-button {
+    color: #25927b;
+    font-size: 48px;
+    position: absolute;
+    right: 5vw;
+    bottom: 5vh;
+    z-index: 10;    
+}
+
+.reset-button:hover {
+    animation: reset-button-anim 1s ease-in-out 1;
+}
+
+@keyframes reset-button-anim {
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}

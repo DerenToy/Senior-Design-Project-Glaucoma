@@ -1,0 +1,28 @@
+nav {
+    height: 8vh;
+    background-color: #25927b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 5vw;
+    border-bottom-right-radius: 10px;
+    animation: nav-menu-slide 1s ease-in-out 1 forwards;
+}
+
+.logo {
+    color: rgb(255, 255, 255);
+    /* text-transform: uppercase; */
+    font-size: 20px;
+}
+
+@keyframes nav-menu-slide {
+    0% {
+        width: 40%;
+    }
+
+    100% {
+        width: 100%;
+    }
+    
+}
