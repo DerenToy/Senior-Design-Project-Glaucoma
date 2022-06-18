@@ -12,4 +12,7 @@ The artificial intelligence model is combined with a web interface so that it ca
 - GluacomaPrediction.ipynb => This file contains the codes related to the old artificial intelligence model we developed for glaucoma prediction.
 - K_fold_Glaucoma.ipynb => This file contains the codes related to the artificial intelligence model that we developed for glaucoma prediction and applied 3-fold cross validation. (This is the main file for AI model.)
 - Senior-Project-Final-Report-KDT-GS.pdf => This file is the report of the project.
-- Presentation.pptx => This file is the presentation of the project.
+- Senior-Design-Project-Presentation.pptx => This file is the presentation of the project.
+
+
+#URL: https://glaucoma-prediction.web.app/
